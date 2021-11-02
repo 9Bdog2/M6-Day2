@@ -1,0 +1,18 @@
+SQL
+
+Relational Database 
+
+ACID(atomicity, consistency, Isolation, Durability )
+
+Atomicity- example : monetary tansfer from a bank account A to acount B
+Consistency- example : 
+Isolation - invisible until done : 
+Durability - when done always done : guarantees that transaction that have commited wil be done 
+
+Tables
+1 - to - 1 relationship
+1- to - many reationship
+many to many relationship 
+Table relationship
+
+
