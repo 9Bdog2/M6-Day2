@@ -15,4 +15,8 @@ Tables
 many to many relationship 
 Table relationship
 
+Primary key - Foreign key 
+
+Data types 
+
 
