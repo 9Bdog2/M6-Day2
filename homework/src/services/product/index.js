@@ -6,6 +6,15 @@ const productsRouter = Router();
 
 productsRouter.get("/", async (req, res, next) => {
   try {
+    const result = await pool.query("SELECT * FROM products");
+    res.status(200).send(result.rows);
+  } catch (err) {
+    res.status(500).send("Error getting products");
+  }
+});
+
+productsRouter.post("/", async (req, res, next) => {
+  try {
     const {
       product_name,
       product_description,
@@ -20,15 +29,7 @@ productsRouter.get("/", async (req, res, next) => {
     );
     res.status(201).send(results.rows[0]);
   } catch (err) {
-    res.status(500).send({ message: error.message });
-  }
-});
-
-productsRouter.post("/", async (req, res, next) => {
-  try {
-      const result = await pool.query("SELECT * FROM products");
-  } catch (err) {
-    res.status(500).send({ message: error.message });
+    res.status(500).send({ message: err });
   }
 });
 
